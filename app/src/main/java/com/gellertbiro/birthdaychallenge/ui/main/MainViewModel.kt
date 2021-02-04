@@ -6,9 +6,13 @@ import com.gellertbiro.birthdaychallenge.core.BirthdayRepository
 
 class MainViewModel(private val repository: BirthdayRepository) : ViewModel() {
 
+    init {
+        loadData()
+    }
+
     val list: MutableLiveData<List<BirthDayListItem>> = MutableLiveData();
 
-    fun loadData() {
+    private fun loadData() {
         repository.getBirthdays { list ->
             this.list.postValue(list.map {
                 BirthDayListItem(it.initials, it.name, it.dob)

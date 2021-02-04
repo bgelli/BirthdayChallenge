@@ -4,14 +4,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/return_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go back"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/initials_background"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="36dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/circle_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/initials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/initials_background"
+        app:layout_constraintEnd_toEndOf="@id/initials_background"
+        app:layout_constraintStart_toStartOf="@id/initials_background"
+        app:layout_constraintTop_toTopOf="@id/initials_background" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/initials_background" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <Button
+        android:id="@+id/return_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/go_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/age" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,8 @@ class DataMapper {
                 Birthday(
                     "${it.name.first.first()}${it.name.last.first()}",
                     "${it.name.title} ${it.name.first} ${it.name.last}",
-                    formatDate(it.dob.date)
+                    formatDate(it.dob.date),
+                    it.dob.age
                 )
             }.sortedBy {
                 it.dob

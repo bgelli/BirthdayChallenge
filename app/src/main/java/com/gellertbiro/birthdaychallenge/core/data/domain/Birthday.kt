@@ -4,4 +4,5 @@ data class Birthday(
     val initials: String,
     val name: String,
     val dob: String,
+    val age : Int
 )

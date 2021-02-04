@@ -38,8 +38,6 @@ class MainFragment : Fragment() {
             adapter.submitList(newList)
         }
         viewModel.list.observe(viewLifecycleOwner, observer)
-
-        viewModel.loadData()
     }
 
     private fun navigateToDetail(id: String) {

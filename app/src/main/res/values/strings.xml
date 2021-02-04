@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">BirthdayChallenge</string>
     <string name="birthdays">Birthdays</string>
+    <string name="go_back">Go back</string>
+    <string name="age_text">%d YEARS OLD</string>
+
 </resources>

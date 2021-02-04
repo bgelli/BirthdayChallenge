@@ -10,9 +10,9 @@ class DataMapperTest {
     @Test
     fun mapResultTest() {
         val resultList: List<BirthdayResult> = listOf(
-            BirthdayResult(Name("Ms", "Johny", "Walker"), BirthdayInfo("1946-05-12T10:34:51.447Z", 23)),
-            BirthdayResult(Name("Mr", "Angeline", "Walker"), BirthdayInfo("1946-11-04T10:34:51.447Z", 23)),
-            BirthdayResult(Name("Mrs", "Johny", "Biden"), BirthdayInfo("1946-05-09T10:34:51.447Z", 23))
+            BirthdayResult(Name("Ms", "Johny", "Walker"), BirthdayInfo("1946-05-12T10:34:51.447Z", 22)),
+            BirthdayResult(Name("Mr", "Angeline", "Walker"), BirthdayInfo("1946-11-04T10:34:51.447Z", 21)),
+            BirthdayResult(Name("Mrs", "Johny", "Biden"), BirthdayInfo("1946-05-09T10:34:51.447Z", 18))
         )
 
         val list = DataMapper.mapResult(resultList)
@@ -28,6 +28,10 @@ class DataMapperTest {
         Assert.assertEquals("05-09-1946", list[0].dob)
         Assert.assertEquals("05-12-1946", list[1].dob)
         Assert.assertEquals("11-04-1946", list[2].dob)
+
+        Assert.assertEquals(18, list[0].age)
+        Assert.assertEquals(22, list[1].age)
+        Assert.assertEquals(21, list[2].age)
 
     }
 }
