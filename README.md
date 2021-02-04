@@ -1,5 +1,6 @@
 # BirthdayChallenge
 
+The project was started by using the Android Studio's Fragment + ViewModel template.
 
 #### Main technical parts/frameworks
 
