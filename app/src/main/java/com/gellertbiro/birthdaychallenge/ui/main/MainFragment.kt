@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gellertbiro.birthdaychallenge.R
@@ -28,6 +29,7 @@ class MainFragment : Fragment() {
         view.findViewById<RecyclerView>(R.id.list)?.let {
             it.adapter = adapter
             it.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            it.addItemDecoration(DividerItemDecoration(it.context, LinearLayoutManager.VERTICAL))
         }
 
         viewModel.loadData()
