@@ -1,7 +1,11 @@
 package com.gellertbiro.birthdaychallenge.ui.main
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+
+    fun loadData() {
+        Log.v("MainVM", "main")
+    }
 }
