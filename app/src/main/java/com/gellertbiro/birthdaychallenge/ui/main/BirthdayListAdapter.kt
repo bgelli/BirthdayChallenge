@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gellertbiro.birthdaychallenge.R
 
-class BirthDayListAdapter(private val listener: (id: String) -> Unit) : RecyclerView.Adapter<BirthDayListAdapter.ViewHolder>() {
+class BirthdayListAdapter(private val listener: (id: String) -> Unit) : RecyclerView.Adapter<BirthdayListAdapter.ViewHolder>() {
 
     private var list: List<BirthDayListItem> = listOf()
 

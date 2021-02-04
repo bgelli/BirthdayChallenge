@@ -24,7 +24,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        val adapter = BirthDayListAdapter {
+        val adapter = BirthdayListAdapter {
             navigateToDetail(it)
         }
 
