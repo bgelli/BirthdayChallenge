@@ -10,11 +10,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gellertbiro.birthdaychallenge.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 
 class MainFragment : Fragment() {
 
-    private val viewModel: MainViewModel by viewModel()
     private val adapter: BirthDayListAdapter = BirthDayListAdapter()
+    private val viewModel: MainViewModel by viewModel {
+        parametersOf(adapter)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.main_fragment, container, false)

@@ -1,11 +1,17 @@
 package com.gellertbiro.birthdaychallenge.ui.main
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 
-class MainViewModel : ViewModel() {
+class MainViewModel(private val adapter: BirthDayListAdapter) : ViewModel() {
 
     fun loadData() {
-        Log.v("MainVM", "main")
+        adapter.submitList(
+            listOf(
+                BirthDayListItem("DF","xcvxcdf", "sdfsf"),
+                BirthDayListItem("DF","xcvxcdf", "sdfsf"),
+                BirthDayListItem("DF","xcvxcdf", "sdfsf"),
+                BirthDayListItem("DF","xcvxcdf", "sdfsf")
+            )
+        )
     }
 }
