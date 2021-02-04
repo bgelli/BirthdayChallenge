@@ -11,7 +11,7 @@ class BirthdayApplication : Application() {
 
         startKoin {
             androidContext(this@BirthdayApplication)
-            modules(appModule)
+            modules(appModule, coreModule)
         }
     }
 }
