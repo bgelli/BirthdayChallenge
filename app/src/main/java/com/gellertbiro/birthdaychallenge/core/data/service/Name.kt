@@ -1,4 +1,4 @@
-package com.gellertbiro.birthdaychallenge.core.data
+package com.gellertbiro.birthdaychallenge.core.data.service
 
 
 import com.squareup.moshi.JsonClass

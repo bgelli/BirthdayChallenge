@@ -2,17 +2,17 @@ package com.gellertbiro.birthdaychallenge.ui.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.gellertbiro.birthdaychallenge.core.BirthdayRepository
 
-class MainViewModel : ViewModel() {
+class MainViewModel(private val repository: BirthdayRepository) : ViewModel() {
 
     val list: MutableLiveData<List<BirthDayListItem>> = MutableLiveData();
 
     fun loadData() {
-        list.value = listOf(
-                BirthDayListItem("DF", "xcvxcdf", "sdfsf"),
-                BirthDayListItem("DF", "xcvxcdf", "sdfsf"),
-                BirthDayListItem("DF", "xcvxcdf", "sdfsf"),
-                BirthDayListItem("DF", "xcvxcdf", "sdfsf")
-        )
+        repository.getBirthdays { list ->
+            this.list.postValue(list.map {
+                BirthDayListItem(it.initials, it.name, it.dob)
+            })
+        }
     }
 }

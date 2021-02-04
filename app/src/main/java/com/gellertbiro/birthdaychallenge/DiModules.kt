@@ -1,5 +1,6 @@
 package com.gellertbiro.birthdaychallenge
 
+import com.gellertbiro.birthdaychallenge.core.BirthdayRepository
 import com.gellertbiro.birthdaychallenge.core.BirthdayService
 import com.gellertbiro.birthdaychallenge.ui.detail.DetailViewModel
 import com.gellertbiro.birthdaychallenge.ui.main.MainViewModel
@@ -12,7 +13,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 
 val appModule = module {
-    viewModel { MainViewModel() }
+    viewModel { MainViewModel(get()) }
     viewModel { DetailViewModel() }
 }
 
