@@ -11,6 +11,10 @@ import com.gellertbiro.birthdaychallenge.R
 
 class DetailFragment : Fragment() {
 
+    companion object {
+        const val KEY_ID = "key_id"
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.detail_fragment, container, false)
     }
